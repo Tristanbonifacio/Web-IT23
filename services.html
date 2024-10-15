@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        
+        <div class="header">
+            <div class="header-Left">
+                <a class="logo">tris</a>
+            </div>
+        <div class="header-Right">
+            <a href="homepage.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact us</a>
+            <a class="active" href="services.html">Services</a>
+                 
+        </div>
+    </div>
+    </header>
+    <div class="services-container">
+        <h2>Our Services</h2>
+        <p>At tris internet cafe, we offer a 1 hour for 20 pesos and we food if you want to order </p>
+        
+        <h3>Our Services Include:</h3>
+        <ul>
+            <li><strong>foods/drinks:</strong> we all know if you play more games you get hungry </li>
+            <li><strong>vip/room:</strong>this vip room is for a player who always want's higher specs for better playing when you paly games </li>  
+        <p>Contact us today to discuss your photography needs and let us help you capture those precious moments!</p>
+    </div>
+    <script>
+        // Check if user is logged in
+        if (!localStorage.getItem('loggedIn')) {
+            window.location.href = "login.html";
+        }
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('loggedIn');
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>

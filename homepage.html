@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        
+        <div class="header">
+            <div class="header-Left">
+                <a class="logo">tris</a>
+            </div>
+        <div class="header-Right">
+            <a class="active" href="homepage.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact us</a>
+            <a href="services.html">Services</a>
+        </div>
+    </div>
+    </header>
+    <div class="home-container">
+        <div class="home-container">
+            <h2>Hello there! Welcome to tris internet cafe! </h2>
+            <p>This page is all about computers and you can play and do schoolworks or eating in out cafe. </p>
+            <p>At tris internet cafe, you play or bonding with your friends and you eat while playing games we do have some foods to deliver at your pc </p>
+            <p>Feel free to browse our services and let us help you.</p>
+        </div>
+    </div>
+    <script>
+        // Check if user is logged in
+        if (!localStorage.getItem('loggedIn')) {
+            window.location.href = "login.html";
+        }
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('loggedIn');
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>
