@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | Grounds Cyber Cafe</title>
+    <title>Highlights | Grounds Cyber Cafe</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-    
+     
         * {
             margin: 0;
             padding: 0;
@@ -60,26 +60,26 @@
             padding-bottom: 5px;
         }
 
-        .services-container {
+        .highlights-container {
             max-width: 1100px;
             margin: 30px auto;
             padding: 0 15px;
             text-align: center;
         }
 
-        .services-container h2 {
+        .highlights-container h2 {
             font-size: 2.5em;
             margin-bottom: 20px;
             color: #333;
         }
 
-        .services-container p {
+        .highlights-container p {
             font-size: 1.2em;
             margin-bottom: 20px;
             color: #555;
         }
 
-        .services-container img {
+        .highlights-container img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
@@ -87,24 +87,24 @@
             margin-bottom: 20px;
         }
 
-        .services-container h3 {
+        .highlights-container h3 {
             font-size: 2em;
             margin-top: 30px;
             color: #333;
         }
 
-        .services-container ul {
+        .highlights-container ul {
             list-style-type: none;
             padding: 0;
         }
 
-        .services-container ul li {
+        .highlights-container ul li {
             font-size: 1.2em;
             margin-bottom: 15px;
             color: #555;
         }
 
-        .services-container ul li strong {
+        .highlights-container ul li strong {
             color: #ff7f50;
         }
 
@@ -144,19 +144,19 @@
                 margin: 10px 0;
             }
 
-            .services-container {
+            .highlights-container {
                 padding: 20px;
             }
 
-            .services-container h2 {
+            .highlights-container h2 {
                 font-size: 2em;
             }
 
-            .services-container h3 {
+            .highlights-container h3 {
                 font-size: 1.8em;
             }
 
-            .services-container ul li {
+            .highlights-container ul li {
                 font-size: 1.1em;
             }
         }
@@ -173,24 +173,27 @@
                 <a href="homepage.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact Us</a>
-                <a class="active" href="services.html">Services</a>
+                <a href="services.html">Services</a>
                 <a class="active" href="highlights.html">Highlights</a>
             </div>
         </div>
     </header>
 
-    <div class="services-container">
-        <h2>Our Services</h2>
-        <img src="https://external-preview.redd.it/5hh6ptkbTbBv3rzKS-KARGGRnEOUWmKa1pHuKFx5UuI.jpg?auto=webp&s=24c4dd1242cffcca738056b0efe754b153200f0d" alt="Our Services" />
-        <p>At Grounds Cyber Cafe, we offer one hour of internet access for just 20 pesos. Additionally, we have a wide variety of food and drinks available for those who want to fuel up during their stay.</p>
+    <div class="highlights-container">
+        <h2>Highlights of Grounds Cyber Cafe</h2>
+        <img src="https://media.tenor.com/1qxyxTXa56UAAAAM/playing-ssumday.gif" />
+        <p>Explore some of the most exciting experiences at Grounds Cyber Cafe. From gaming to group study, we provide a variety of options to make your visit memorable. Here are some highlights from our offerings.</p>
 
-        <img src="https://as2.ftcdn.net/v2/jpg/01/41/16/91/1000_F_141169106_gj3udU7kTACCUSBskj7VzCKlwwFkpS1L.jpg" alt="Food and Drinks" />
-        <h3>Our Services Include:</h3>
+        <h3>What Makes Us Special:</h3>
         <ul>
-            <li><strong>Food & Drinks:</strong> A variety of snacks and drinks to keep you energized as you play or work.</li>
-            <li><strong>VIP Room:</strong> This VIP room is tailored for players who need high-end specifications for an enhanced gaming experience.</li>
+            <li><strong>Fast Internet:</strong> Experience ultra-fast internet for seamless gaming and browsing.</li>
+            <li><strong>VIP Gaming Rooms:</strong> Rent out our VIP rooms for an elevated gaming experience with high-end equipment and exclusive access.</li>
+            <li><strong>Snack & Drink Bar:</strong> Enjoy snacks and drinks available all day to fuel your gaming session or study time.</li>
+            <li><strong>Comfortable Seating:</strong> Relax with ergonomic chairs and spacious seating arrangements that prioritize comfort.</li>
         </ul>
-        <p>We strive to provide a fun and engaging environment for online gaming, studying, or working. Enjoy your time with us while sipping coffee, snacking, and engaging with friends online.</p>
+
+        <img src="https://media.tenor.com/k7CJLY0Wmj4AAAAM/kid-typing.gif" />
+        <p>Our cafe is designed to create an engaging environment where you can hang out with friends, study, play games, or simply enjoy a relaxed time online.</p>
     </div>
 
     <footer>
@@ -198,12 +201,12 @@
     </footer>
 
     <script>
-        
+
         if (!localStorage.getItem('loggedIn')) {
             window.location.href = "login.html";
         }
 
-        
+     
         document.getElementById('logout')?.addEventListener('click', function() {
             localStorage.removeItem('loggedIn');
             window.location.href = "login.html";

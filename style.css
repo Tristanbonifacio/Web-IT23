@@ -1,20 +1,32 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #b5b0b0;
+    background-color: #b5b0b0; /* Light gray background */
     margin: 0;
     padding: 20px;
 }
+
+/* Navbar Styling */
 .navbar {
     background-color: #333;
     overflow: hidden;
 }
+
 .navbar ul {
     list-style-type: none;
     padding: 0;
 }
+
 .navbar li {
     float: left;
 }
+
 .navbar li a, .navbar li button {
     display: block;
     color: rgb(195, 109, 109);
@@ -22,25 +34,103 @@ body {
     padding: 14px 16px;
     text-decoration: none;
 }
+
 .navbar li button {
     background: none;
     border: none;
     cursor: pointer;
 }
+
 .navbar li a:hover, .navbar li button:hover {
     background-color: #575757;
 }
-.login-container, .home-container, .about-container, .contact-container {
+
+/* Header Styling */
+.header {
+    overflow: hidden;
+    background-color: rgb(248, 239, 239);
+    padding: 10px 0px;
+}
+
+.header img {
+    height: 50px;
+    width: 50px;
+}
+
+.header a {
+    float: left;
+    color: rgb(17, 7, 7);
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.header a:hover {
+    background-color: rgb(71, 71, 71);
+    color: White;
+}
+
+.header a.active {
+    background-color: rgb(2, 2, 2);
+    color: rgb(245, 244, 244);
+}
+
+.header-Right {
+    float: right;
+}
+
+
+.home-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+.home-container h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.home-container p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+.home-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.login-container, .about-container, .contact-container, .info-container {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background: rgb(211, 154, 154);
+    background: rgb(211, 154, 154); 
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
-h2 {
-    text-align: center;
-}
+
 input {
     width: 100%;
     padding: 10px;
@@ -48,6 +138,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 button {
     width: 100%;
     padding: 10px;
@@ -57,93 +148,47 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
 button:hover {
     background-color: #4cae4c;
 }
+
 .error-message {
     color: red;
     text-align: center;
 }
-.header {
-    overflow: hidden;
-    background-color: rgb(248, 239, 239);
-    padding: 10px 0px;
-  }
-    
-    
-    .header img{
-      height: 50px;
-      width: 50px;
+
+
+.home-container p,
+.home-container h2 {
+    border-left: 4px solid #f3a847; 
+    padding-left: 10px;
+    margin-left: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+@media (max-width: 768px) {
+    .navbar li {
+        float: none;
+        width: 100%;
+        text-align: center;
     }
-    
-    
-    /* Style the header links */
-    .header a {
-      float: left;
-      color: rgb(17, 7, 7);
-      text-align: center;
-      padding: 12px;
-      text-decoration: none;
-      font-size: 18px;
-      line-height: 25px;
-      border-radius: 4px;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: bold;
-    }
-    
-    /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-    .header a.logo {
-      font-size: 25px;
-      font-weight: bold;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    
-    /* Change the background color on mouse-over */
-    .header a:hover {
-      background-color: rgb(71, 71, 71);
-      color: White;
-    }
-    
-    .header a.active {
-      background-color: rgb(2, 2, 2);
-      color: rgb(245, 244, 244);
-    }
-    
-    /* Float the link section to the right */
+
     .header-Right {
-      float: right;
+        float: none;
     }
+
     .home-container {
-        max-width: 600px;
-        margin: 20px auto;
-        padding: 20px;
-        background: rgb(148, 145, 145);
-        border-radius: 5px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
+        margin: 20px;
+        padding: 15px;
     }
-    
-    .info-container {
-        max-width: 600px;
-        margin: 20px auto;
-        padding: 20px;
-        background: white;
-        border-radius: 5px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    .home-container {
-        max-width: 800px;
-        margin: 40px auto;
-        padding: 20px;
-        background: white;
-        border-radius: 5px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    }
-    h2 {
-        color: #333;
-    }
-    p {
-        color: #666;
-        line-height: 1.6;
-    }
+}
