@@ -6,7 +6,6 @@
     <title>Highlights | Grounds Cyber Cafe</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-     
         * {
             margin: 0;
             padding: 0;
@@ -58,6 +57,19 @@
             color: #ff7f50;
             border-bottom: 2px solid #ff7f50;
             padding-bottom: 5px;
+        }
+
+        .header-Right .logout {
+            background-color: #ff7f50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .header-Right .logout:hover {
+            background-color: #ff5f2e;
         }
 
         .highlights-container {
@@ -124,7 +136,6 @@
             text-decoration: underline;
         }
 
-       
         @media (max-width: 768px) {
             .header {
                 flex-direction: column;
@@ -166,15 +177,17 @@
     <header>
         <div class="header">
             <div class="header-Left">
-                <a class="logo" href="homepage.html">Grounds Cyber Cafe</a>
+                <a class="logo" href="index.html">Grounds Cyber Cafe</a>
                 <img src="https://media.istockphoto.com/id/134102335/photo/computer-room.jpg?s=612x612&w=0&k=20&c=PHU14e4gC--avPB6UtIBq2IcFxt_IHZOud79TulfPiE=" alt="Tris Logo" style="height: 50px;"/> 
             </div>
             <div class="header-Right">
-                <a href="homepage.html">Home</a>
+                <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact Us</a>
                 <a href="services.html">Services</a>
                 <a class="active" href="highlights.html">Highlights</a>
+                <!-- Logout button -->
+                <a href="#" class="logout" id="logout">Logout</a>
             </div>
         </div>
     </header>
@@ -201,15 +214,16 @@
     </footer>
 
     <script>
-
+        
         if (!localStorage.getItem('loggedIn')) {
             window.location.href = "login.html";
         }
 
-     
-        document.getElementById('logout')?.addEventListener('click', function() {
-            localStorage.removeItem('loggedIn');
-            window.location.href = "login.html";
+        document.getElementById('logout')?.addEventListener('click', function(e) {
+            if (confirm("Are you sure you want to log out?")) {
+                localStorage.removeItem('loggedIn');
+                window.location.href = "login.html";
+            }
         });
     </script>
 </body>

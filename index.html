@@ -6,24 +6,27 @@
     <title>Grounds Cyber Cafe</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-       
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             background: #f4f4f4;
             color: #333;
+            overflow-x: hidden;
         }
 
         header {
             background-color: #333;
             color: #fff;
             padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         .header {
@@ -40,6 +43,11 @@
             font-weight: bold;
             color: #ff7f50;
             text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .header .logo:hover {
+            transform: scale(1.1);
         }
 
         .header-Right a {
@@ -47,6 +55,7 @@
             color: white;
             margin-left: 20px;
             font-size: 1em;
+            transition: color 0.3s ease, padding-bottom 0.3s ease;
         }
 
         .header-Right a:hover, .header-Right .active {
@@ -55,11 +64,27 @@
             padding-bottom: 5px;
         }
 
+        .header-Right .logout {
+            background-color: #ff7f50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .header-Right .logout:hover {
+            background-color: #ff5f2e;
+        }
+
         .home-container {
             max-width: 1100px;
             margin: 20px auto;
             padding: 0 15px;
             text-align: center;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
         }
 
         .home-container h2 {
@@ -80,6 +105,8 @@
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards 0.5s;
         }
 
         footer {
@@ -99,6 +126,12 @@
         }
 
       
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
         @media (max-width: 768px) {
             .header {
                 flex-direction: column;
@@ -124,14 +157,15 @@
     <header>
         <div class="header">
             <div class="header-Left">
-                <a class="logo" href="homepage.html">Grounds Cyber Cafe</a>
+                <a class="logo" href="index.html">Grounds Cyber Cafe</a>
             </div>
             <div class="header-Right">
-                <a class="active" href="homepage.html">Home</a>
+                <a class="active" href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact Us</a>
                 <a href="services.html">Services</a>
                 <a class="active" href="highlights.html">Highlights</a>
+                <a href="#" class="logout" id="logout">Logout</a>
             </div>
         </div>
     </header>
@@ -149,15 +183,26 @@
     </footer>
 
     <script>
-      
         if (!localStorage.getItem('loggedIn')) {
             window.location.href = "login.html";
         }
 
-        
-        document.getElementById('logout')?.addEventListener('click', function() {
-            localStorage.removeItem('loggedIn');
-            window.location.href = "login.html";
+        document.getElementById('logout')?.addEventListener('click', function(e) {
+            if (confirm("Are you sure you want to log out?")) {
+                localStorage.removeItem('loggedIn');
+                window.location.href = "login.html";
+            }
+        });
+
+    
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth' 
+                });
+            });
         });
     </script>
 </body>

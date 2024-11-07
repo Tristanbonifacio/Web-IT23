@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +7,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #b5b0b0; /* Light gray background */
+    background-color: #b5b0b0; 
     margin: 0;
     padding: 20px;
 }
 
-/* Navbar Styling */
+
 .navbar {
     background-color: #333;
     overflow: hidden;
@@ -45,7 +45,7 @@ body {
     background-color: #575757;
 }
 
-/* Header Styling */
+
 .header {
     overflow: hidden;
     background-color: rgb(248, 239, 239);
