@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Highlights | Grounds Cyber Cafe</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> 
     <style>
         * {
             margin: 0;
@@ -53,7 +54,8 @@
             font-size: 1em;
         }
 
-        .header-Right a:hover, .header-Right .active {
+        .header-Right a:hover,
+        .header-Right .active {
             color: #ff7f50;
             border-bottom: 2px solid #ff7f50;
             padding-bottom: 5px;
@@ -173,21 +175,20 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="header">
             <div class="header-Left">
                 <a class="logo" href="index.html">Grounds Cyber Cafe</a>
-                <img src="https://media.istockphoto.com/id/134102335/photo/computer-room.jpg?s=612x612&w=0&k=20&c=PHU14e4gC--avPB6UtIBq2IcFxt_IHZOud79TulfPiE=" alt="Tris Logo" style="height: 50px;"/> 
+                <img src="https://media.istockphoto.com/id/134102335/photo/computer-room.jpg?s=612x612&w=0&k=20&c=PHU14e4gC--avPB6UtIBq2IcFxt_IHZOud79TulfPiE=" alt="Logo" style="height: 50px;" />
             </div>
             <div class="header-Right">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact Us</a>
                 <a href="services.html">Services</a>
-                <a href="Highlights.html">highlights</a>
-                
-            
+                <a href="Highlights.html">Highlights</a>
                 <a href="#" class="logout" id="logout">Logout</a>
             </div>
         </div>
@@ -195,7 +196,7 @@
 
     <div class="highlights-container">
         <h2>Highlights of Grounds Cyber Cafe</h2>
-        <img src="https://media.tenor.com/1qxyxTXa56UAAAAM/playing-ssumday.gif" />
+        <img src="https://media.tenor.com/1qxyxTXa56UAAAAM/playing-ssumday.gif" alt="Highlight Image" />
         <p>Explore some of the most exciting experiences at Grounds Cyber Cafe. From gaming to group study, we provide a variety of options to make your visit memorable. Here are some highlights from our offerings.</p>
 
         <h3>What Makes Us Special:</h3>
@@ -206,7 +207,7 @@
             <li><strong>Comfortable Seating:</strong> Relax with ergonomic chairs and spacious seating arrangements that prioritize comfort.</li>
         </ul>
 
-        <img src="https://media.tenor.com/k7CJLY0Wmj4AAAAM/kid-typing.gif" />
+        <img src="https://media.tenor.com/k7CJLY0Wmj4AAAAM/kid-typing.gif" alt="Highlight Image 2" />
         <p>Our cafe is designed to create an engaging environment where you can hang out with friends, study, play games, or simply enjoy a relaxed time online.</p>
     </div>
 
@@ -215,12 +216,15 @@
     </footer>
 
     <script>
-        
+       
         if (!localStorage.getItem('loggedIn')) {
-            window.location.href = "login.html";
+            if (window.location.pathname !== "/login.html") {
+                window.location.href = "login.html";
+            }
         }
 
-        document.getElementById('logout')?.addEventListener('click', function(e) {
+       
+        document.getElementById('logout')?.addEventListener('click', function (e) {
             if (confirm("Are you sure you want to log out?")) {
                 localStorage.removeItem('loggedIn');
                 window.location.href = "login.html";
@@ -228,4 +232,5 @@
         });
     </script>
 </body>
+
 </html>
