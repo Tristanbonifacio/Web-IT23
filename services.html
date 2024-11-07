@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Highlights | Grounds Cyber Cafe</title>
+    <title>Services | Grounds Cyber Cafe</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         * {
@@ -15,12 +15,13 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background: #f4f4f4;
-            color: #333;
+            background: url('https://images.unsplash.com/photo-1518770660439-4636190af6d4') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
         }
 
         header {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.6);
             color: #fff;
             padding: 15px 0;
         }
@@ -59,7 +60,6 @@
             padding-bottom: 5px;
         }
 
-        /* New styles for logout button */
         .header-Right .logout {
             background-color: #ff7f50;
             color: white;
@@ -73,52 +73,58 @@
             background-color: #ff5f2e;
         }
 
-        .highlights-container {
+        .services-container {
             max-width: 1100px;
             margin: 30px auto;
-            padding: 0 15px;
+            padding: 20px;
             text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
         }
 
-        .highlights-container h2 {
+        .services-container h2 {
             font-size: 2.5em;
             margin-bottom: 20px;
-            color: #333;
+            color: #ff7f50;
         }
 
-        .highlights-container p {
+        .services-container p {
             font-size: 1.2em;
             margin-bottom: 20px;
-            color: #555;
+            color: #ddd;
         }
 
-        .highlights-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-        .highlights-container h3 {
-            font-size: 2em;
-            margin-top: 30px;
-            color: #333;
-        }
-
-        .highlights-container ul {
+        .services-container ul {
             list-style-type: none;
             padding: 0;
         }
 
-        .highlights-container ul li {
+        .services-container ul li {
             font-size: 1.2em;
             margin-bottom: 15px;
-            color: #555;
+            color: #ddd;
         }
 
-        .highlights-container ul li strong {
+        .services-container ul li strong {
             color: #ff7f50;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .service-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .service-item div {
+            text-align: left;
         }
 
         footer {
@@ -156,19 +162,15 @@
                 margin: 10px 0;
             }
 
-            .highlights-container {
+            .services-container {
                 padding: 20px;
             }
 
-            .highlights-container h2 {
+            .services-container h2 {
                 font-size: 2em;
             }
 
-            .highlights-container h3 {
-                font-size: 1.8em;
-            }
-
-            .highlights-container ul li {
+            .services-container ul li {
                 font-size: 1.1em;
             }
         }
@@ -185,30 +187,48 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact Us</a>
-                <a href="services.html">Services</a>
-                <a class="active" href="highlights.html">Highlights</a>
-
-                
+                <a class="active" href="services.html">Services</a>
+                <a href="highlights.html">Highlights</a>
                 <a href="#" class="logout" id="logout">Logout</a>
             </div>
         </div>
     </header>
 
-    <div class="highlights-container">
-        <h2>Highlights of Grounds Cyber Cafe</h2>
-        <img src="https://media.tenor.com/1qxyxTXa56UAAAAM/playing-ssumday.gif" />
-        <p>Explore some of the most exciting experiences at Grounds Cyber Cafe. From gaming to group study, we provide a variety of options to make your visit memorable. Here are some highlights from our offerings.</p>
+    <div class="services-container">
+        <h2>Our Services</h2>
+        <p>We offer a wide range of services designed to make your visit to Grounds Cyber Cafe an unforgettable experience. Whether you’re here to game, study, or hang out with friends, we have something for everyone!</p>
 
-        <h3>What Makes Us Special:</h3>
-        <ul>
-            <li><strong>Fast Internet:</strong> Experience ultra-fast internet for seamless gaming and browsing.</li>
-            <li><strong>VIP Gaming Rooms:</strong> Rent out our VIP rooms for an elevated gaming experience with high-end equipment and exclusive access.</li>
-            <li><strong>Snack & Drink Bar:</strong> Enjoy snacks and drinks available all day to fuel your gaming session or study time.</li>
-            <li><strong>Comfortable Seating:</strong> Relax with ergonomic chairs and spacious seating arrangements that prioritize comfort.</li>
-        </ul>
+        <div class="service-item">
+            <img src="https://image.shutterstock.com/image-photo/young-man-sitting-computer-room-260nw-1340140723.jpg" alt="Gaming">
+            <div>
+                <h3>Gaming</h3>
+                <p>Get your game on with the latest gaming systems and high-speed internet! Choose from our variety of popular games and play in comfort.</p>
+            </div>
+        </div>
 
-        <img src="https://media.tenor.com/k7CJLY0Wmj4AAAAM/kid-typing.gif" />
-        <p>Our cafe is designed to create an engaging environment where you can hang out with friends, study, play games, or simply enjoy a relaxed time online.</p>
+        <div class="service-item">
+            <img src="https://image.shutterstock.com/image-photo/group-of-colleagues-working-together-260nw-1730592860.jpg" alt="Study">
+            <div>
+                <h3>Study Areas</h3>
+                <p>Need a quiet space for study or group work? We provide comfortable, well-lit study areas equipped with high-speed internet and charging ports.</p>
+            </div>
+        </div>
+
+        <div class="service-item">
+            <img src="https://image.shutterstock.com/image-photo/people-having-lunch-cafe-260nw-1196873449.jpg" alt="Snack Bar">
+            <div>
+                <h3>Snack & Drink Bar</h3>
+                <p>Stay fueled with a wide range of snacks and refreshing drinks. Our snack bar is stocked with your favorites to keep you energized during your time at the cafe.</p>
+            </div>
+        </div>
+
+        <div class="service-item">
+            <img src="https://image.shutterstock.com/image-photo/comfortable-chair-in-modern-office-260nw-1609297719.jpg" alt="Comfortable Seating">
+            <div>
+                <h3>Comfortable Seating</h3>
+                <p>Relax in our ergonomic seating designed for long gaming sessions or study hours. Comfort is our priority.</p>
+            </div>
+        </div>
     </div>
 
     <footer>
@@ -216,12 +236,10 @@
     </footer>
 
     <script>
-   
         if (!localStorage.getItem('loggedIn')) {
             window.location.href = "login.html";
         }
 
-   
         document.getElementById('logout')?.addEventListener('click', function() {
             localStorage.removeItem('loggedIn');
             window.location.href = "login.html";
